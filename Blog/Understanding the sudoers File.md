@@ -2,7 +2,7 @@
 
 `sudoers` file contains the information regarding privileges for different users and groups of our server. It is one of the most important files in the system and needs to be handled with care.
 
-Do not try edit the `sudoers` file without `visudo`. If we try to edit it using our normal process and if any error persists, it might lock us out of the server. `visudo` is a more reliable way as it validates the file after every edit and does not save it until all errors are resolved.
+Do not try to edit the `sudoers` file without `visudo`. If we try to edit it using our normal process and if any error persists, it might lock us out of the server. `visudo` is a more reliable way as it validates the file after every edit and does not save it until all errors are resolved.
 
 To edit a `sudoers` file, we must use:
 
