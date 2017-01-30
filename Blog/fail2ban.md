@@ -47,7 +47,7 @@ service fail2ban start
 
 ![service start fail2ban](https://virajkhatavkar.com/wp-content/uploads/2017/01/service-fail2ban-start.gif)
 
-Now, if we try to log in to the server with invalid credentials, it will ban us after 5 attempts. I have attempted to authenticate into the server as `root` user with invalid credentials for more than 5 times. Now, even if I try to log in into the server, it refuses the connection:
+Now, if we try to log in to the server with invalid credentials, it will ban us after 5 attempts. I have failed to authenticate as `root` user for more than 5 times. Now, even if I try to log in into the server, it refuses the connection:
 
 ![fail2ban-refused](https://virajkhatavkar.com/wp-content/uploads/2017/01/fail2ban-refused.gif)
 
