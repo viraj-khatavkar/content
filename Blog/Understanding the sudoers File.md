@@ -64,7 +64,7 @@ The syntax specification for a rule in the `sudoers` file is:
 user    (host)=(user:group) commands
 ```
 
-We can read the above rule as **A given user can run the specified commands as the specified user or group from the specified hosts**
+We can read the above rule as *A given user can run the specified commands as the specified user or group from the specified hosts*
 
 ##Group Privileges
 
