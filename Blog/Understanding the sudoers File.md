@@ -1,8 +1,8 @@
 #Understanding the sudoers File
 
-`sudoers` file contains the specifications of privileges for different users and groups who can log in to our server. It is one of the most important files in the system and needs to be handled with care.
+`sudoers` file contains the information regarding privileges for different users and groups of our server. It is one of the most important files in the system and needs to be handled with care.
 
-Do not edit the `sudoers` file without `visudo`. If we try to edit it using our normal process and any error persists, it might lock us out of the server. `visudo` is a more reliable way as it validates the file after every edit and does not save it if any errors are visualized.
+Do not try edit the `sudoers` file without `visudo`. If we try to edit it using our normal process and if any error persists, it might lock us out of the server. `visudo` is a more reliable way as it validates the file after every edit and does not save it until all errors are resolved.
 
 To edit a `sudoers` file, we must use:
 
@@ -81,7 +81,7 @@ The above rule says that:
 
 ##NOPASSWD
 
-We seldom have a need to execute certain commands without a password. A common example demonstrating this would of an automated deployment script which might require to restart some services or reload `nginx` after every deploy.
+We seldom have a need to execute certain commands without a password. A common example demonstrating this would be of an automated deployment script which might require to restart some services or reload `nginx` after every deploy.
 
 We can modify or add the privileges for certain users in our `sudoers` file. Let us provide the `deployer` user to reload `nginx` without password:
 
