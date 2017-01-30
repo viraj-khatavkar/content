@@ -68,7 +68,7 @@ We can read the above rule as *A given user can run the specified commands as th
 
 ##Group Privileges
 
-If we prepend a `%` before a name, then it becomes a group for the system. Privileges for `sudo` group are as follows:
+Groups are represented by a `%` sign before the name. Privileges for `sudo` group are as follows:
 
 ```bash
 # Allow members of group sudo to execute any command
@@ -91,7 +91,17 @@ We can modify or add the privileges for certain users in our `sudoers` file. Let
 deployer    ALL=(ALL) NOPASSWD:/usr/sbin/nginx reload
 ```
 
+Alternatively, we can allow the `deployer` user to run all `nginx` related commands:
+
+```bash
+deployer    ALL=(ALL) NOPASSWD:/usr/sbin/nginx *
+```
+
 We can add multiple commands by separating them with commas.
+
+```bash
+deployer    ALL=(ALL) NOPASSWD:/usr/sbin/nginx reload,/usr/sbin/php7.0-fpm restart
+```
 
 >It is advisable to create a new file in `/etc/sudoers.d` directory rather than directly editing the sudoers file. All files in `/etc/sudoers.d` directory are automatically loaded.
 
